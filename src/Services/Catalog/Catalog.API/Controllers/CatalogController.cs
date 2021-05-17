@@ -34,7 +34,7 @@ namespace Catalog.API.Controllers
         }
 
 
-        [HttpGet("{id: length(24)}",Name ="GetProduct")]
+        [HttpGet("{id:length(24)}",Name ="GetProduct")]
                [ProducesResponseType((int)HttpStatusCode.NotFound)]
         [ProducesResponseType(typeof(Product),(int)HttpStatusCode.OK)]
         public async Task<ActionResult<IEnumerable<Product>>> GetProductbyID(string id)
@@ -85,7 +85,7 @@ namespace Catalog.API.Controllers
             
         }
 
-        [HttpDelete("{id: length(24)}", Name = "DeleteProduct")]
+        [HttpDelete("{id:length(24)}", Name = "DeleteProduct")]
         [ProducesResponseType(typeof(Product), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> DeleteProductbyId(string id)
         {
